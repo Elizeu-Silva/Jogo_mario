@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  height: 100vh;
+}
+.container-game{
+  width: 900px;
+  height: 600px;
+  /* Created with https://www.css-gradient.com */
+  background: #6196FF;
+  background: -webkit-linear-gradient(top, #6196FF, #DBD2EC);
+  background: -moz-linear-gradient(top, #6196FF, #DBD2EC);
+  background: linear-gradient(to bottom, #6196FF, #DBD2EC);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 10px solid #4e0e01;
+}
+
+
+.mario{
+  width: 140px;
+  position: absolute;
+  bottom: 0;
+}
+
+.jump-mario{
+  animation: jump 0.7s ease-out ;
+}
+.pipe{
+  width: 60px;
+  position: absolute;
+  bottom: 0;
+  animation: pipe 1s linear infinite;
+}
+.cloud-div{
+  display: flex;
+  animation: cloud 10s linear infinite;
+  position: relative;
+  margin-top: 20px;
+}
+
+.cloud{
+  width: 400px;
+  top: 30px;
+  right: -800px;
+
+}
+
+@keyframes jump{
+  0%{
+    bottom: 0;
+  }
+  
+  40%{
+    bottom: 110px;
+  }
+  50%{
+    bottom: 110px;
+  }
+  60%{
+    bottom: 110px;
+  }
+  100%{
+  bottom: 0px;
+}
+
+100%{
+  bottom: 0;
+}
+
+}
+
+
+@keyframes pipe {
+  0%{
+    right: -80px;
+  }
+
+  100%{
+    right:100%;
+  }
+
+}
+
+@keyframes cloud{
+  0%{
+    right: -980px;
+  }
+
+  100%{
+    right: 800px;
+  }
+}
